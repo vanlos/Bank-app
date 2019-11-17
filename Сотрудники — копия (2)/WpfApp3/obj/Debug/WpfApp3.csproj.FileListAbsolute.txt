@@ -1,0 +1,48 @@
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\WpfApp3.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\App.g.cs
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\WpfApp3_MarkupCompile.cache
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\WpfApp3_MarkupCompile.lref
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\bin\Debug\WpfApp3.exe.config
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\bin\Debug\WpfApp3.exe
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\bin\Debug\WpfApp3.pdb
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\bin\Debug\Npgsql.dll
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\bin\Debug\Npgsql.xml
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\MainWindow.g.cs
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\MainWindow.baml
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\WpfApp3.g.resources
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\WpfApp3.Properties.Resources.resources
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\WpfApp3.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\WpfApp3.exe
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\WpfApp3.pdb
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\PayWindow.g.cs
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\PayWindow.baml
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\NewAccount.g.cs
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\NewClient.g.cs
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\NewAccount.baml
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники\WpfApp3\obj\Debug\NewClient.baml
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\WpfApp3.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\MainWindow.g.cs
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\NewAccount.g.cs
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\NewClient.g.cs
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\PayWindow.g.cs
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\App.g.cs
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\WpfApp3_MarkupCompile.cache
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\WpfApp3_MarkupCompile.lref
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\WpfApp3.exe
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\WpfApp3.pdb
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\bin\Debug\WpfApp3.exe.config
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\bin\Debug\WpfApp3.exe
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\bin\Debug\WpfApp3.pdb
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\bin\Debug\Npgsql.dll
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\bin\Debug\Npgsql.xml
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\MainWindow.baml
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\NewAccount.baml
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\NewClient.baml
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\PayWindow.baml
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\WpfApp3.g.resources
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\WpfApp3.Properties.Resources.resources
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\WpfApp3.csproj.GenerateResource.Cache
