@@ -36,31 +36,31 @@ namespace WpfApp3.Model
         // Using a DependencyProperty as the backing store for Patron.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty PatronProperty =
             DependencyProperty.Register("Patron", typeof(string), typeof(Client), new PropertyMetadata(string.Empty));
-        public string Agreement
+        public int Agreement
         {
-            get { return (string)GetValue(AgreementProperty); }
+            get { return (int)GetValue(AgreementProperty); }
             set { SetValue(AgreementProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for Agreement.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty AgreementProperty =
-            DependencyProperty.Register("Agreement", typeof(string), typeof(Client), new PropertyMetadata(string.Empty));
-        public int PassId
+            DependencyProperty.Register("Agreement", typeof(int), typeof(Client), new PropertyMetadata(0));
+        public string PassId
         {
-            get { return (int)GetValue(PassIdProperty); }
+            get { return (string)GetValue(PassIdProperty); }
             set { SetValue(PassIdProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for PassSeries.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty PassIdProperty =
-            DependencyProperty.Register("PassId", typeof(int), typeof(Client), new PropertyMetadata(0));
-        public int PassSeries
+            DependencyProperty.Register("PassId", typeof(string), typeof(Client), new PropertyMetadata(string.Empty));
+        public string PassSeries
         {
-            get { return (int)GetValue(PassSeriesProperty); }
+            get { return (string)GetValue(PassSeriesProperty); }
             set { SetValue(PassSeriesProperty, value); }
         }
         public static readonly DependencyProperty PassSeriesProperty =
-             DependencyProperty.Register("PassSeries", typeof(int), typeof(Client), new PropertyMetadata(0));
+             DependencyProperty.Register("PassSeries", typeof(string), typeof(Client), new PropertyMetadata(string.Empty));
         public string Account
         {
             get { return (string)GetValue(AccountProperty); }

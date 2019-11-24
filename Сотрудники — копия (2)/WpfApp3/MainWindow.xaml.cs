@@ -31,8 +31,8 @@ namespace WpfApp3
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
+             
             
-            string CmdString = string.Empty;
            
         }
 

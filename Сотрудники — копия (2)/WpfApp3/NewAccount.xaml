@@ -5,21 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp3"
         mc:Ignorable="d"
-        Title="NewAccount" Height="300" Width="300">
-    <Grid>
+        Title="NewAccount" Height="344.342" Width="808.848">
+    <Grid Margin="0,0,0.4,-42.2">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="148*"/>
-            <ColumnDefinition Width="145*"/>
+            <ColumnDefinition Width="122*"/>
+            <ColumnDefinition Width="155*"/>
+            <ColumnDefinition Width="526*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Открыть Карту" HorizontalAlignment="Left" Margin="12,39,0,0" VerticalAlignment="Top" Width="95"/>
-        <Button Content="Открыть Вклад" Grid.Column="1" HorizontalAlignment="Left" Margin="25,37,0,0" VerticalAlignment="Top" Width="95" />
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="26,72,0,0" TextWrapping="Wrap" Text="Сумма" VerticalAlignment="Top" Width="100" />
-        <DatePicker Grid.Column="1" HorizontalAlignment="Left" Margin="26,159,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.536,0.525" />
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="26,118,0,0" TextWrapping="Wrap" Text="Ставка" VerticalAlignment="Top" Width="100" />
-        <DatePicker HorizontalAlignment="Left" Margin="15,137,0,0" VerticalAlignment="Top" />
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="15,79,0,0" TextWrapping="Wrap" Text="Счёт" VerticalAlignment="Top" Width="95" />
-        <Button Content="Оформить" HorizontalAlignment="Left" Margin="15,222,0,0" VerticalAlignment="Top" Width="75" />
-        <Button Content="Оформить" Grid.Column="1" HorizontalAlignment="Left" Margin="26,225,0,0" VerticalAlignment="Top" Width="75" />
+        <Button Content="Открыть Карту"  Name ="CardButton" HorizontalAlignment="Left" Margin="12,39,0,0" VerticalAlignment="Top" Width="95" Click="CardButton_Click" Height="19"/>
+        <Button Content="Открыть Вклад" Name ="DepButton" Grid.Column="1" HorizontalAlignment="Left" Margin="23.4,37,0,0" VerticalAlignment="Top"  Width="95" Click="DepButton_Click" Height="19" />
+        <TextBox Grid.Column="1"  Name ="sumBox" HorizontalAlignment="Left" Height="23" Margin="24.4,72,0,0" TextWrapping="Wrap" Text="Сумма" IsEnabled="False" VerticalAlignment="Top" Width="100" />
+        <DatePicker Grid.Column="1" Name ="depDate" HorizontalAlignment="Left" Margin="24.4,159,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.536,0.525"  IsEnabled="False" Height="24" Width="100"/>
+        <TextBox Grid.Column="1" Name ="rateBox" HorizontalAlignment="Left" Height="23" Margin="24.4,118,0,0" TextWrapping="Wrap" Text="Ставка" IsEnabled="False" VerticalAlignment="Top" Width="100" />
+        <DatePicker HorizontalAlignment="Left" IsEnabled="False" Name ="cardDate" Margin="15,137,0,0" VerticalAlignment="Top" Height="24" Width="99" />
+        <TextBox HorizontalAlignment="Left" Name ="CardAcc" Height="23" Margin="15,79,0,0" TextWrapping="Wrap" Text="Счёт" VerticalAlignment="Top" Width="95" IsEnabled="False"/>
+        <Button Content="Оформить" Name ="Compl1Button" HorizontalAlignment="Left" Margin="15,222,0,0" VerticalAlignment="Top" Width="75" Click="Compl1Button_Click" IsEnabled="False" Height="19" />
+        <Button Content="Оформить" Name ="Compl2Button" Grid.Column="1" HorizontalAlignment="Left" Margin="24.4,225,0,0" VerticalAlignment="Top" Width="75" Click="Compl2Button_Click" IsEnabled="False" Height="19" />
+        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="24.4,192,0,0" VerticalAlignment="Top" Width="97"  Name="cur" Height="22">
+            <TextBlock>USD</TextBlock>
+            <TextBlock>RUB</TextBlock>
+            <TextBlock>JPY</TextBlock>
+            <TextBlock>EUR</TextBlock>
+            <TextBlock>UAH</TextBlock>
+        </ComboBox>
+        <DataGrid x:Name="grdCliento" ItemsSource="{Binding Clients}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="True" SelectedItem="{Binding CurrentClient}" Margin="0,39,6.6,0" HorizontalAlignment="Right" Width="504" Height="277" VerticalAlignment="Top" Grid.Column="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Name}" IsReadOnly="True" Width="20*"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding SName}" IsReadOnly="True" Width="20*"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Patron}" IsReadOnly="True" Width="20*"/>
+                <DataGridTextColumn Header="Номер Счёта" Binding="{Binding Account}" IsReadOnly="True" Width="20*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
 
     </Grid>
 </Window>

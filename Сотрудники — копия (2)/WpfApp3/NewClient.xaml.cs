@@ -27,22 +27,35 @@ namespace WpfApp3
         {
             InitializeComponent();
         }
-       
-        public NpgsqlConnection con { get; set; }
-        public NpgsqlCommand com { get; set; }
-        public byte[] Bytes;
-        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string query = "insert into client values(" +  NameBox.Text + ",'" + SNameBox.Text + "','" + PatronBox.Text + "','" +
-                               IdBox.Text + "','" + SeriesBox.Text + "','" + AccountBox.Text + "',@bytes)";
-
-            com = new NpgsqlCommand(query, con);
-            com.Parameters.Add(
-                    new NpgsqlParameter() { ParameterName = "@bytes", DbType = DbType.Binary, Value = Bytes }
-                    );
-            NpgsqlDataReader reader = com.ExecuteReader();
-           
+            ViewModel v = new ViewModel();
+            int a;
+            if (v.Clients.Count == 0)
+            {
+                a = 296789;
+            }
+            else
+            {
+                a = v.Clients[v.Clients.Count - 1].Agreement + 1;
+            }
+            v.Name = NameBox.Text;
+            v.SName = SNameBox.Text;
+            v.Patron = PatronBox.Text;
+            v.PassId = IdBox.Text;
+            v.PassSeries = SeriesBox.Text;
+            v.Account = AccountBox.Text;
+            string query = "insert into client values(" + a + ",'" + v.Name + "','" + v.SName + "','" + v.Patron + "','" +
+                               v.PassId + "','" + v.PassSeries + "','" + v.Account + "')";
+            string query2 = "insert into accounts (account) values(" + "'" + v.Account + "')";
+            v.com  = new NpgsqlCommand(query, v.con);
+            NpgsqlDataReader reader = v.com.ExecuteReader();
+            reader.Close();
+            v.com = new NpgsqlCommand(query2, v.con);
+            NpgsqlDataReader r2 = v.com.ExecuteReader();
+            r2.Close();
+            v.AllClients();
+            Close();
         }
     }
 }

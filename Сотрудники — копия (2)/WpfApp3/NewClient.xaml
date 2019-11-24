@@ -11,13 +11,19 @@
             <RowDefinition Height="218*"/>
             <RowDefinition Height="215*"/>
         </Grid.RowDefinitions>
-        <TextBox Name="NameBox" HorizontalAlignment="Left" Height="23" Margin="58,57,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" Width="120" />
-        <TextBox Name="SNameBox" HorizontalAlignment="Left" Height="23" Margin="58,118,0,0" TextWrapping="Wrap" Text="Фамилия" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="PatronBox" HorizontalAlignment="Left" Height="23" Margin="58,176,0,0" TextWrapping="Wrap" Text="Отчество" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="IdBox" HorizontalAlignment="Left" Height="23" Margin="58,70.5,0,0" TextWrapping="Wrap" Text="Номер Паспорта" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
-        <TextBox Name="SeriesBox" HorizontalAlignment="Left" Height="23" Margin="58,14.5,0,0" TextWrapping="Wrap" Text="Серия Паспорта" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
-        <TextBox Name="AccountBox" HorizontalAlignment="Left" Height="23" Margin="58,120.5,0,0" TextWrapping="Wrap" Text="Новый Счёт" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox Name="NameBox" HorizontalAlignment="Left" Height="23" Margin="58,57,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="120" MaxLength="12" />
+        <TextBox Name="SNameBox" HorizontalAlignment="Left" Height="23" Margin="58,118,0,0" TextWrapping="Wrap" Text="{Binding SName}" VerticalAlignment="Top" Width="120" MaxLength="12"/>
+        <TextBox Name="PatronBox" HorizontalAlignment="Left" Height="23" Margin="58,176,0,0" TextWrapping="Wrap" Text="{Binding Patron}" VerticalAlignment="Top" Width="120" MaxLength="12"/>
+        <TextBox Name="IdBox" HorizontalAlignment="Left" Height="23" Margin="58,70.5,0,0" TextWrapping="Wrap" Text="{Binding PassId}" VerticalAlignment="Top" Width="120" Grid.Row="1" MaxLength="4"/>
+        <TextBox Name="SeriesBox" HorizontalAlignment="Left" Height="23" Margin="58,14.5,0,0" TextWrapping="Wrap" Text="{Binding PassSeries}" VerticalAlignment="Top" Width="120" Grid.Row="1" MaxLength="5"/>
+        <TextBox Name="AccountBox" HorizontalAlignment="Left" Height="23" Margin="58,120.5,0,0" TextWrapping="Wrap" Text="{Binding Account}" VerticalAlignment="Top" Width="120" Grid.Row="1" MaxLength="20"/>
         <Button Content="Оформить" HorizontalAlignment="Left" Margin="58,168.4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="83" Height="23" Click="Button_Click"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="221,55,0,0" VerticalAlignment="Top"/>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="221,127,0,0" VerticalAlignment="Top"/>
+        <Label Content="Отчество" HorizontalAlignment="Left" Margin="221,181,0,0" VerticalAlignment="Top"/>
+        <Label Content="Серия паспорта" HorizontalAlignment="Left" Margin="221,20.4,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Номер паспорта" HorizontalAlignment="Left" Margin="221,73.4,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Новый счет" HorizontalAlignment="Left" Margin="221,124.4,0,0" Grid.Row="1" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

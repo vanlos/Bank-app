@@ -9,7 +9,7 @@
     <Grid Margin="0,182,-0.4,0.4">
         <TabControl Margin="-2,2,-1,4"  HorizontalAlignment="Right" Width="997">
             <TabItem Header="Клиенты">
-                <DataGrid x:Name="grdClient" ItemsSource="{Binding Client }" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="True" SelectedItem="{Binding Current}" Grid.ColumnSpan="2" Margin="-6,0,-10.2,-10.4" HorizontalAlignment="Right" Width="1001" Height="262" VerticalAlignment="Bottom">
+                <DataGrid x:Name="grdClient" ItemsSource="{Binding Clients}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="True" SelectedItem="{Binding CurrentClient}" Grid.ColumnSpan="2" Margin="-6,0,-10.2,-10.4" HorizontalAlignment="Right" Width="1001" Height="262" VerticalAlignment="Bottom">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Имя" Binding="{Binding Name}" IsReadOnly="True" Width="20*"/>
                         <DataGridTextColumn Header="Фамилия" Binding="{Binding SName}" IsReadOnly="True" Width="20*"/>
@@ -23,7 +23,7 @@
             </TabItem>
             <TabItem Header="Вклады">
                 <Grid Background="#FFE5E5E5" Margin="0,0,523,0">
-                    <DataGrid ItemsSource="{Binding Deposit}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+                    <DataGrid ItemsSource="{Binding Deposit}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" SelectedItem="{Binding CurrentDeposit}">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Номер" Binding="{Binding DeposAcc}" Width="30*"/>
                             <DataGridTextColumn Header="Сумма" Binding="{Binding Amount}" Width="30*"/>
@@ -51,6 +51,7 @@
             <Button Content="Переводы"  Width="180" HorizontalAlignment="Left" Grid.Column="1" Margin="11.4,92,0,48"/>
             <Button Content="Оплата услуг"  Width="180" HorizontalAlignment="Left" Grid.Column="1" Margin="227.4,31,0,109" Command="{Binding PayCommand}"/>
             <Button Content="Оформление договора"  Width="180" HorizontalAlignment="Left" Grid.Column="1" Margin="228.4,97,0,43" Command="{Binding AddClientCommand}" />
+            <Button Content="Удалить" HorizontalAlignment="Left" Margin="14,128,0,0" VerticalAlignment="Top" Width="112" Height="33" Command="{Binding DeleteClientCommand}" />
         </Grid>
     </Grid>
 
