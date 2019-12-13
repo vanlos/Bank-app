@@ -30,6 +30,7 @@ namespace WpfApp3
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ViewModel v = new ViewModel();
+            Random r = new Random();
             int a;
             if (v.Clients.Count == 0)
             {
@@ -44,16 +45,18 @@ namespace WpfApp3
             v.Patron = PatronBox.Text;
             v.PassId = IdBox.Text;
             v.PassSeries = SeriesBox.Text;
-            v.Account = AccountBox.Text;
+            string acc = string.Empty;
+            for (int i = 0; i < 20; i++)
+            {
+                acc += r.Next(0, 9).ToString();
+            }
             string query = "insert into client values(" + a + ",'" + v.Name + "','" + v.SName + "','" + v.Patron + "','" +
-                               v.PassId + "','" + v.PassSeries + "','" + v.Account + "')";
-            string query2 = "insert into accounts (account) values(" + "'" + v.Account + "')";
+                               v.PassId + "','" + v.PassSeries + "','" + acc + "')";
+            
             v.com  = new NpgsqlCommand(query, v.con);
             NpgsqlDataReader reader = v.com.ExecuteReader();
             reader.Close();
-            v.com = new NpgsqlCommand(query2, v.con);
-            NpgsqlDataReader r2 = v.com.ExecuteReader();
-            r2.Close();
+            
             v.AllClients();
             Close();
         }

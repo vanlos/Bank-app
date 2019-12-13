@@ -132,30 +132,78 @@ namespace WpfApp3.Model
         public static readonly DependencyProperty LimitProperty =
             DependencyProperty.Register("Limitation", typeof(DateTime), typeof(ViewModel), new PropertyMetadata(DateTime.Today));
         #endregion
+        #region ForCard
+        public string CardAcc
+        {
+            get { return (string)GetValue(CardAccProperty); }
+            set { SetValue(CardAccProperty, value); }
+        }
+        // Using a DependencyProperty as the backing store for Name.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CardAccProperty =
+            DependencyProperty.Register("CardAcc", typeof(string), typeof(ViewModel), new PropertyMetadata(string.Empty));
+
+        public int CardAmount
+        {
+            get { return (int)GetValue(CardAmountProperty); }
+            set { SetValue(CardAmountProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for SName.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CardAmountProperty =
+            DependencyProperty.Register("CardAmount", typeof(int), typeof(ViewModel), new PropertyMetadata(0));
+        public string CardNum
+        {
+            get { return (string)GetValue(CardNumProperty); }
+            set { SetValue(CardNumProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Patron.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CardNumProperty =
+            DependencyProperty.Register("CardNum", typeof(string), typeof(ViewModel), new PropertyMetadata(string.Empty));
+
+             public string SecCode
+        {
+            get { return (string)GetValue(SecCodeProperty); }
+            set { SetValue(SecCodeProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Patron.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty SecCodeProperty =
+            DependencyProperty.Register("SecCode", typeof(string), typeof(ViewModel), new PropertyMetadata(string.Empty));
+
+        public string AlAcc
+        {
+            get { return (string)GetValue(AlAccProperty); }
+            set { SetValue(AlAccProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Patron.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty AlAccProperty =
+            DependencyProperty.Register("AlAcc", typeof(string), typeof(ViewModel), new PropertyMetadata(string.Empty));
+        public DateTime CardLimit
+        {
+            get { return (DateTime)GetValue(CardLimitProperty); }
+            set { SetValue(CardLimitProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for PassSeries.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CardLimitProperty =
+            DependencyProperty.Register("CardLimitation", typeof(DateTime), typeof(ViewModel), new PropertyMetadata(DateTime.Today));
+        #endregion
         #region ForFind
 
-        public string FindPassword
+        public string FindAcc
         {
-            get { return (string)GetValue(FindPasswordProperty); }
-            set { SetValue(FindPasswordProperty, value); }
+            get { return (string)GetValue(FindAccProperty); }
+            set { SetValue(FindAccProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for FindPassword.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty FindPasswordProperty =
-            DependencyProperty.Register("FindPassword", typeof(string), typeof(ViewModel),
+        public static readonly DependencyProperty FindAccProperty =
+            DependencyProperty.Register("FindAcc", typeof(string), typeof(ViewModel),
                 new PropertyMetadata(string.Empty));
 
-        public string FindKey
-        {
-            get { return (string)GetValue(FindKeyProperty); }
-            set { SetValue(FindKeyProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for FindPassword.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty FindKeyProperty =
-            DependencyProperty.Register("FindKey", typeof(string), typeof(ViewModel),
-                new PropertyMetadata(string.Empty));
-
+      
 
      
         #endregion
@@ -187,6 +235,24 @@ namespace WpfApp3.Model
         public static readonly DependencyProperty CurrentDepositProperty =
             DependencyProperty.Register("CurrentDeposit", typeof(Deposit), typeof(ViewModel), new PropertyMetadata(null));
 
+        public List<Card> Cards
+        {
+            get { return (List<Card>)GetValue(CardsProperty); }
+            set { SetValue(CardsProperty, value); }
+        }
+
+        public static readonly DependencyProperty CardsProperty =
+           DependencyProperty.Register("Cards", typeof(List<Card>), typeof(ViewModel), new PropertyMetadata(null));
+        public Card CurrentCard
+        {
+            get { return (Card)GetValue(CurrentCardProperty); }
+            set { SetValue(CurrentCardProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for CurrentClient.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CurrentCardProperty =
+            DependencyProperty.Register("CurrentCard", typeof(Card), typeof(ViewModel), new PropertyMetadata(null));
+
 
         public Client CurrentClient
         {
@@ -197,6 +263,25 @@ namespace WpfApp3.Model
         // Using a DependencyProperty as the backing store for CurrentClient.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CurrentClientProperty =
             DependencyProperty.Register("CurrentClient", typeof(Client), typeof(ViewModel), new PropertyMetadata(null));
+        public Client CurrentClient1
+        {
+            get { return (Client)GetValue(CurrentClient1Property); }
+            set { SetValue(CurrentClient1Property, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for CurrentClient.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CurrentClient1Property =
+            DependencyProperty.Register("CurrentClient1", typeof(Client), typeof(ViewModel), new PropertyMetadata(null));
+
+        public Client CurrentClient2
+        {
+            get { return (Client)GetValue(CurrentClient2Property); }
+            set { SetValue(CurrentClient2Property, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for CurrentClient.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CurrentClient2Property =
+            DependencyProperty.Register("CurrentClient2", typeof(Client), typeof(ViewModel), new PropertyMetadata(null));
 
         public List<string> AccountCollection
         {
@@ -282,6 +367,15 @@ namespace WpfApp3.Model
         public static readonly DependencyProperty FindCommandProperty =
             DependencyProperty.Register("FindCommand", typeof(DelegateCommand), typeof(ViewModel),
                 new PropertyMetadata(null));
+        public DelegateCommand TransactCommand
+        {
+            get { return (DelegateCommand)GetValue(TransactCommandProperty); }
+            set { SetValue(TransactCommandProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for AddClientCommand.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty TransactCommandProperty =
+            DependencyProperty.Register("TransactCommand", typeof(DelegateCommand), typeof(ViewModel), new PropertyMetadata(null));
 
 
 
@@ -293,8 +387,7 @@ namespace WpfApp3.Model
             PayCommand = new DelegateCommand(Pay, () => true);
             DeleteClientCommand = new DelegateCommand(DeleteClient, () => true);
             AddAccCommand = new DelegateCommand(AddAccount, () => true);
-         
-            FindCommand = new DelegateCommand(Find, () => true);
+            TransactCommand = new DelegateCommand(Transaction, () => true);
             #endregion
 
             try
@@ -310,14 +403,24 @@ namespace WpfApp3.Model
 
             Clients = new List<Client>();
             CurrentClient = new Client();
+            CurrentClient1 = new Client();
+            CurrentClient2 = new Client();
             Deposits = new List<Deposit>();
             CurrentDeposit = new Deposit();
+            Cards = new List<Card>();
+            CurrentCard = new Card();
             AccountCollection = new List<string>();
             AllClients();
             AllAccounts();
+            AllCards();
+            AllDeposits();
         }
 
-       
+        public void Transaction()
+        {
+            TransWindow t = new TransWindow();
+            t.Show();
+        }
         public void Pay()
         {
             PayWindow p = new PayWindow();
@@ -382,6 +485,24 @@ namespace WpfApp3.Model
                 Limit = (DateTime)r["limitation"],
             }).ToList(); ;
         }
+
+        public void AllCards()
+        {
+            string CmdString =
+                "select card_account, card_num, sec_code, limitation, amount from card";
+
+            NpgsqlDataAdapter nda = new NpgsqlDataAdapter(CmdString, con);
+            DataTable dt = new DataTable();
+            nda.Fill(dt);
+            Cards = dt.AsEnumerable().Select(r => new Card
+            {
+                CardAcc = (string)r["card_account"],
+                CardNum = (string)r["card_num"],
+                SecCode = (string)r["sec_code"],
+                CardAmount = (int)r["amount"],
+                CardLimit = (DateTime)r["limitation"],
+            }).ToList(); ;
+        }
         public void DeleteClient()
         {
             if (CurrentClient != null)
@@ -397,13 +518,7 @@ namespace WpfApp3.Model
                 MessageBox.Show("Выберите клиента!");
             }
         }
-        public void Find()
-        {
-            string CmdString = string.Empty;
-            
-            NpgsqlDataAdapter nda = new NpgsqlDataAdapter(CmdString, con);
-            DataTable dt_1 = new DataTable();
-           
-        }
+        
+
     }
 }

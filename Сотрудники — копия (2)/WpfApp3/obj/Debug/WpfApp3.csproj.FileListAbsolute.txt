@@ -46,3 +46,5 @@ C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копи�
 C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\WpfApp3.g.resources
 C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\WpfApp3.Properties.Resources.resources
 C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\WpfApp3.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\TransWindow.g.cs
+C:\Users\Admin\Documents\!Курсы\3,1\БД\Сотрудники — копия (2)\WpfApp3\obj\Debug\TransWindow.baml

@@ -23,7 +23,7 @@
             </TabItem>
             <TabItem Header="Вклады">
                 <Grid Background="#FFE5E5E5" Margin="0,0,523,0">
-                    <DataGrid ItemsSource="{Binding Deposit}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" SelectedItem="{Binding CurrentDeposit}">
+                    <DataGrid ItemsSource="{Binding Deposits}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" SelectedItem="{Binding CurrentDeposit}" Margin="0,0,-250.8,-0.4" HorizontalAlignment="Left" Width="719">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Номер" Binding="{Binding DeposAcc}" Width="30*"/>
                             <DataGridTextColumn Header="Сумма" Binding="{Binding Amount}" Width="30*"/>
@@ -44,14 +44,13 @@
                 <RowDefinition/>
                 <RowDefinition Height="0*"/>
             </Grid.RowDefinitions>
-            <TextBox HorizontalAlignment="Right" Height="26" Margin="0,40,42.6,114" TextWrapping="Wrap" Text="Пароль" Width="120" />
-            <TextBox HorizontalAlignment="Right" Height="26" Margin="0,38,198.6,0" TextWrapping="Wrap" Text="Ключ" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.497,0.492"/>
-            <Button Content="Авторизация" Click="Login_Click" Margin="9,35,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="155" />
-            <Button Content="Открытие Счёта"  Width="180" HorizontalAlignment="Left" Grid.Column="1" Margin="8.4,32,0,108"  Command="{Binding AddAccCommand}" />
-            <Button Content="Переводы"  Width="180" HorizontalAlignment="Left" Grid.Column="1" Margin="11.4,92,0,48"/>
-            <Button Content="Оплата услуг"  Width="180" HorizontalAlignment="Left" Grid.Column="1" Margin="227.4,31,0,109" Command="{Binding PayCommand}"/>
-            <Button Content="Оформление договора"  Width="180" HorizontalAlignment="Left" Grid.Column="1" Margin="228.4,97,0,43" Command="{Binding AddClientCommand}" />
-            <Button Content="Удалить" HorizontalAlignment="Left" Margin="14,128,0,0" VerticalAlignment="Top" Width="112" Height="33" Command="{Binding DeleteClientCommand}" />
+
+
+            <Button Content="Открытие Счёта"  Width="180" HorizontalAlignment="Left" Margin="224,14,0,124"  Command="{Binding AddAccCommand}" />
+            <Button Content="Переводы"  Width="180" HorizontalAlignment="Left" Margin="14.4,86,0,54" Command="{Binding TransactCommand}" Grid.Column="1"/>
+            <Button Content="Оплата услуг"  Width="180" HorizontalAlignment="Left" Grid.Column="1" Margin="14.4,15,0,125" Command="{Binding PayCommand}"/>
+            <Button Content="Оформление договора"  Width="180" HorizontalAlignment="Left" Margin="14,14,0,126" Command="{Binding AddClientCommand}" />
+            <Button Content="Разорвать договор" HorizontalAlignment="Left" Margin="14,128,0,0" VerticalAlignment="Top" Width="112" Height="33" Command="{Binding DeleteClientCommand}" />
         </Grid>
     </Grid>
 

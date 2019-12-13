@@ -1,0 +1,61 @@
+﻿<Window x:Class="WpfApp3.TransWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="TransWindow" Height="418.343" Width="1126.955">
+    <Grid Margin="446,2,0.8,-2.2">
+        <Grid.RowDefinitions>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="336*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl Margin="0,5,0.6,0"  HorizontalAlignment="Right" Width="666" Grid.Column="1" Height="381" VerticalAlignment="Top">
+            <TabItem Header="Клиенты">
+                <DataGrid x:Name="grdCliento2" ItemsSource="{Binding Clients}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="True" SelectedItem="{Binding CurrentClient1}" Grid.ColumnSpan="2" Margin="-5,0,-11,-181" Height="353" VerticalAlignment="Top">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Имя" Binding="{Binding Name}" IsReadOnly="True" Width="20*"/>
+                        <DataGridTextColumn Header="Фамилия" Binding="{Binding SName}" IsReadOnly="True" Width="20*"/>
+                        <DataGridTextColumn Header="Отчество" Binding="{Binding Patron}" IsReadOnly="True" Width="20*"/>
+                        <DataGridTextColumn Header="Номер Счёта" Binding="{Binding Account}" IsReadOnly="True" Width="20*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Вклады">
+                <Grid Background="#FFE5E5E5" Margin="0,0,523,0">
+                    <DataGrid x:Name="grdDeposito" ItemsSource="{Binding Deposits}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" SelectedItem="{Binding CurrentDeposit}" Margin="-2,0,-526,0">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Номер" Binding="{Binding DeposAcc}" Width="30*"/>
+                            <DataGridTextColumn Header="Сумма" Binding="{Binding Amount}" Width="30*"/>
+                            <DataGridTextColumn Header="Валюта" Binding="{Binding Currency}" Width="40*"/>
+                            <DataGridTextColumn Header="Ставка" Binding="{Binding Rate}" Width="40*"/>
+                            <DataGridTextColumn Header="Срок действия" Binding="{Binding Limit}" Width="40*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+
+        <TextBox HorizontalAlignment="Right" IsReadOnly="True" Height="29" Margin="-439,17,258.6,0" TextWrapping="Wrap" Text="{Binding CurrentClient1.Account}" VerticalAlignment="Top" Width="182" Name="AccBox1"/>
+        <Button Content="На карту" Margin="-437,75,318.6,0" VerticalAlignment="Top" Height="29" Click="Button_Click" />
+        <Button Content="На вклад" HorizontalAlignment="Left" Margin="-208,79,0,0" VerticalAlignment="Top" Width="115" Height="29" Click="Button_Click_1" />
+        <TextBox HorizontalAlignment="Right"  Height="30" Margin="-222,162,20.6,0" TextWrapping="Wrap" Text="{Binding CurrentDeposit.DeposAcc}" VerticalAlignment="Top" IsEnabled="False" Width="203" Name="DepBox"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="-433,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="131" Name="AmBox1" IsEnabled="False"/>
+        <Label Content="Сумма" HorizontalAlignment="Left" Margin="-431,207,0,0" VerticalAlignment="Top" Height="26" Width="46"/>
+        <TextBox HorizontalAlignment="Left"  Height="28" Margin="-434,314,0,0" TextWrapping="Wrap" Text="" Name="SecBox" VerticalAlignment="Top" Width="129" IsEnabled="False"/>
+        <Label Content="Защитный код" HorizontalAlignment="Left" Margin="-427,279,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="29" Margin="-435,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="131" Name="CardBox" IsEnabled="False"/>
+        <Label Content="Карта получателя" HorizontalAlignment="Left" Margin="-431,124,0,0" VerticalAlignment="Top"/>
+        <Label Content="Вклад получателя" HorizontalAlignment="Left" Margin="-215,124,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="-220,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="131" Name="AmBox2" IsEnabled="False"/>
+        <Label Content="Сумма" HorizontalAlignment="Left" Margin="-223,215,0,0" VerticalAlignment="Top" Height="26" Width="46"/>
+        <Button Content="Провести" HorizontalAlignment="Left" Margin="-403,354,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Name="CardBu" Click="CardBu_Click"/>
+        <Button Content="Провести" HorizontalAlignment="Left" Margin="-212,346,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Name="DepBu" Click="DepBu_Click" />
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="-213,308,0,0" TextWrapping="Wrap" Text="{Binding CurrentClient1.Name}" VerticalAlignment="Top" Width="120" Name="NameBox" Visibility="Collapsed"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="-172,27,0,0" TextWrapping="Wrap" Text="{Binding CurrentClient1.SName}" VerticalAlignment="Top" Width="120" Name="SNameBox" Visibility="Collapsed"/>
+    </Grid>
+</Window>

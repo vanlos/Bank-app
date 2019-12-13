@@ -5,12 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp3"
         mc:Ignorable="d"
-        Title="PayWindow" Height="200" Width="300">
-    <Grid>
-        <Button Content="Оплатить" HorizontalAlignment="Left" Margin="187,132,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="88,61,0,0" TextWrapping="Wrap" Text="Лицевой Счёт" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="89,32,0,0" TextWrapping="Wrap" Text="ННН" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="87,92,0,0" TextWrapping="Wrap" Text="Сумма" VerticalAlignment="Top" Width="120"/>
-
+        Title="PayWindow" Height="200" Width="677.69">
+    <Grid Margin="0,0,-3.8,0.4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="274*"/>
+            <ColumnDefinition Width="401*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Оплатить" HorizontalAlignment="Left" Margin="15,143,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="12,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="12,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="12,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Name="AmBox"/>
+        <DataGrid x:Name="grdCliento" ItemsSource="{Binding Clients}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="True" SelectedItem="{Binding CurrentClient}" Margin="0,1,0.2,0" HorizontalAlignment="Right" Width="400" Height="168" VerticalAlignment="Top" Grid.Column="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Name}" IsReadOnly="True" Width="20*"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding SName}" IsReadOnly="True" Width="20*"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Patron}" IsReadOnly="True" Width="20*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Height="21" Margin="12,12,0,0" TextWrapping="Wrap" Text="{Binding CurrentClient.Account}" VerticalAlignment="Top" Width="76" Name="AccBox"/>
+        <Label Content="ННН" HorizontalAlignment="Left" Margin="154,47,0,0" VerticalAlignment="Top"/>
+        <Label Content="Лицевой Счёт" HorizontalAlignment="Left" Margin="154,76,0,0" VerticalAlignment="Top"/>
+        <Label Content="Сумма" HorizontalAlignment="Left" Margin="154,106,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
